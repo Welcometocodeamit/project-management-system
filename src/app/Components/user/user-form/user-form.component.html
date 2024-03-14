@@ -1,0 +1,37 @@
+<div style="width: auto;">
+    <form  id="userForm" [formGroup]="userForm">
+
+        <div>
+            <h2>User form</h2>
+        </div>
+       <div>
+        <mat-form-field class="feild">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+       </div>
+
+       <div>
+        <mat-form-field class="feild">
+            <mat-label>Email id</mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+       </div>
+
+       <div>
+        <mat-form-field class="feild">
+            <mat-label>Role</mat-label>
+            <mat-select formControlName="role">
+                <mat-option *ngFor="let role of roles" [value]="role">
+                    {{role}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+       </div>
+
+       <div>
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button [mat-dialog-close]="true" [disabled]="userForm.invalid" cdkFocusInitial (click)="submit()">{{this.data.method}} User</button>
+       </div>
+    </form>
+</div>

@@ -1,0 +1,187 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Yash Kale",
+      "email": "yash@gmail.com",
+      "role": "Manager"
+    },
+    {
+      "id": "3",
+      "name": "Preet Patel",
+      "email": "preet@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "id": "4",
+      "name": "Rushikesh Nagre",
+      "email": "rushi@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "id": "5",
+      "name": "Amit Kumbhar",
+      "email": "amit@gmail.com",
+      "role": "Manager"
+    },
+    {
+      "id": "6",
+      "name": "Durgesh Sonawale",
+      "email": "durgesh@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "id": "7",
+      "name": "Suman Patil",
+      "email": "suman@gmail.com",
+      "role": "Tester"
+    },
+    {
+      "id": "8",
+      "name": "Akul Patil",
+      "email": "akul@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "id": "9",
+      "name": "Satyam Sawant",
+      "email": "satyam@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "projectName": "Project 1",
+      "projectManager": {
+        "id": "2",
+        "name": "Yash Kale",
+        "email": "yash@gmail.com",
+        "role": "Manager"
+      },
+      "developers": [
+        {
+          "details": {
+            "id": "4",
+            "name": "Rushikesh Nagre",
+            "email": "rushi@gmail.com",
+            "role": "Developer"
+          },
+          "startDate": "2024-03-13T18:30:00.000Z"
+        },
+        {
+          "details": {
+            "id": "6",
+            "name": "Durgesh Sonawale",
+            "email": "durgesh@gmail.com",
+            "role": "Developer"
+          },
+          "startDate": "2024-03-12T18:30:00.000Z"
+        },
+        {
+          "details": {
+            "id": "3",
+            "name": "Preet Patel",
+            "email": "preet@gmail.com",
+            "role": "Developer"
+          },
+          "startDate": "2024-03-13T18:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "projectName": "Project 2",
+      "projectManager": {
+        "id": "5",
+        "name": "Amit kumbhar",
+        "email": "amit@gmail.com",
+        "role": "Manager"
+      },
+      "developers": [
+        {
+          "details": {
+            "id": "6",
+            "name": "Durgesh Sonawale",
+            "email": "durgesh@gmail.com",
+            "role": "Developer"
+          },
+          "startDate": "2024-03-12T18:30:00.000Z"
+        },
+        {
+          "details": {
+            "id": "8",
+            "name": "Akul patil",
+            "email": "akul@gmail.com",
+            "role": "Developer"
+          },
+          "startDate": "2024-03-12T18:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "projectName": "Project 3",
+      "projectManager": {
+        "id": "5",
+        "name": "Amit kumbhar",
+        "email": "amit@gmail.com",
+        "role": "Manager"
+      },
+      "developers": [
+        {
+          "details": {
+            "id": "4",
+            "name": "Rushikesh Nagre",
+            "email": "rushi@gmail.com",
+            "role": "Developer"
+          },
+          "startDate": "2024-03-13T18:30:00.000Z"
+        },
+        {
+          "details": {
+            "id": "6",
+            "name": "Durgesh Sonawale",
+            "email": "durgesh@gmail.com",
+            "role": "Developer"
+          },
+          "startDate": "2024-03-13T18:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "projectName": "Project 4",
+      "projectManager": {
+        "id": "2",
+        "name": "Yash Kale",
+        "email": "yash@gmail.com",
+        "role": "Manager"
+      },
+      "developers": [
+        {
+          "details": {
+            "id": "3",
+            "name": "Preet Patel",
+            "email": "preet@gmail.com",
+            "role": "Developer"
+          },
+          "startDate": "2024-03-13T18:30:00.000Z"
+        }
+      ]
+    }
+  ],
+  "leaves": [
+    {
+      "id": "1",
+      "user": {
+        "id": "6",
+        "name": "Durgesh Sonawale",
+        "email": "durgesh@gmail.com",
+        "role": "Developer"
+      },
+      "from": "2024-03-14T18:30:00.000Z",
+      "to": "2024-03-14T18:30:00.000Z"
+    }
+  ]
+}

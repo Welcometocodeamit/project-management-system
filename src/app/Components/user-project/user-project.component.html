@@ -1,0 +1,71 @@
+<div class="reports">
+    <div class="searchDate">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <form id="dateForm" [formGroup]="dateForm">
+                <mat-form-field>
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input formControlName="from" matStartDate placeholder="Start date">
+                        <input formControlName="to" matEndDate placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+            </form>&nbsp;&nbsp;
+
+            <div>
+                <button mat-raised-button color="primary" (click)="submit()">Search</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h2>Active Projects</h2>
+
+    <div style="width: 100%; display: flex; justify-content: center;">
+        <p>Showing results for date from {{from |date}} to {{to |date }}</p>
+    </div>
+
+    <div class="cards">
+        <div *ngFor="let project of projects" >
+            <mat-card class="example-card" style="background-color: rgb(255, 255, 255); box-shadow: 5px 5px 5px 5px rgba(0, 0, 0.2, 0.2);">
+                <mat-card-header style="display: flex; justify-content: center; align-items: center; ">
+                  <mat-card-title style="font-weight: bolder;">{{project.projectName}}</mat-card-title>
+                </mat-card-header><br>
+
+                <div *ngIf="project.developers.length>0" style="display: flex; flex-direction: column; justify-content:space-between;">
+                    <div>
+                        <mat-card-content>
+                            <h3 style="font-weight: bolder;">Team</h3>
+                          <ng-container>
+                            <p *ngFor="let developer of project.developers, let i=index ">{{developer.details.name}}  - {{getStatus(developer.details)}}</p>
+                          </ng-container>
+                        </mat-card-content>
+                    </div>
+                    <div>
+                        <mat-divider></mat-divider>
+                    </div>
+                    <div>
+
+                        <mat-card-footer class="ft">
+                            <div style="margin: 5px 20px;">
+                                <p><b>Team Strength - <span>{{getStrength(project.developers).strength}}</span></b></p>
+                                <p><b>Availablity of team - <span >{{getStrength(project.developers).percentage | number}}%</span></b></p>
+                            </div>
+                            <div>
+                                <div id="circle" [ngClass]="getClass(project)"></div>
+                            </div>
+                        </mat-card-footer>
+                    </div>
+
+                   
+
+                </div>
+                <div  *ngIf="project.developers.length==0" style="display: flex; justify-content: center;">
+                    <p>Data not available</p>
+                </div>
+              </mat-card>
+        </div>
+    </div>
+</div>

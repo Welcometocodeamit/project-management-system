@@ -1,0 +1,39 @@
+<form  id="leaveForm" [formGroup]="leaveForm">
+
+    <div>
+        <h2>Leave form</h2>
+    </div>
+
+   <div>
+    <mat-form-field class="feild">
+        <mat-label>Select Employee</mat-label>
+        <input placeholder="Pick one" aria-label="Number" matInput formControlName="user"
+        [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn">
+        <!-- <mat-select formControlName="user"> -->
+            <mat-option *ngFor="let emp of filteredOptions | async | slice:0:5" [value]="emp">
+                {{emp.name}}
+            </mat-option>
+        <!-- </mat-select> -->
+    </mat-autocomplete>
+    </mat-form-field>
+   </div>
+
+   <div>
+    <mat-form-field>
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker" [min]="today">
+          <input formControlName="from" matStartDate placeholder="Start date" >
+          <input formControlName="to" matEndDate placeholder="End date" >
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+   </div>
+
+   <div>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" [disabled]="leaveForm.invalid" cdkFocusInitial (click)="submit()">Add Leave</button>
+   </div>
+</form>

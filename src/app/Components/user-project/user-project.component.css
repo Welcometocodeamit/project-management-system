@@ -1,0 +1,62 @@
+.reports{
+    margin: 40px;
+}
+
+.searchDate{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cards{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    
+}
+
+.example-card{
+    width: 400px;
+    /* min-height: 330px; */
+}
+
+.VW{
+    background-color: red;
+}
+
+.Weak{
+    background-color: rgb(200, 99, 37);
+}
+
+.Moderate{
+    background-color: rgb(255, 243, 114);
+}
+
+.Strong{
+    background-color: rgb(11, 165, 0);
+}
+
+.ft{
+    margin: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#circle{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+mat-hint{
+   font-size: 15px;
+}
+
+mat-card-content{
+    margin: -5px 10px;
+    margin-bottom: 10px;
+}

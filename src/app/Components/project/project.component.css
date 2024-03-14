@@ -1,0 +1,19 @@
+.project-main{
+    margin: 40px;
+}
+
+.list-project{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.add-project{
+    /* width: 30%; */
+}
+
+
+.mainp{
+    margin: 40px;
+}

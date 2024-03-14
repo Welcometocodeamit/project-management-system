@@ -1,0 +1,16 @@
+.leaveMain{
+    margin: 40px;
+}
+
+.table{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.tb{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
