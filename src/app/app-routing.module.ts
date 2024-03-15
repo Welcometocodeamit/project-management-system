@@ -10,6 +10,7 @@ const routes: Routes = [
   {path:'project', component:ProjectComponent},
   {path:'report', component:UserProjectComponent},
   {path:'leave', component:LeaveComponent},
+  {path:'**', component:UserProjectComponent},
 ];
 
 @NgModule({

@@ -148,27 +148,6 @@
           "startDate": "2024-03-13T18:30:00.000Z"
         }
       ]
-    },
-    {
-      "id": "4",
-      "projectName": "Project 4",
-      "projectManager": {
-        "id": "2",
-        "name": "Yash Kale",
-        "email": "yash@gmail.com",
-        "role": "Manager"
-      },
-      "developers": [
-        {
-          "details": {
-            "id": "3",
-            "name": "Preet Patel",
-            "email": "preet@gmail.com",
-            "role": "Developer"
-          },
-          "startDate": "2024-03-13T18:30:00.000Z"
-        }
-      ]
     }
   ],
   "leaves": [
@@ -181,7 +160,7 @@
         "role": "Developer"
       },
       "from": "2024-03-14T18:30:00.000Z",
-      "to": "2024-03-14T18:30:00.000Z"
+      "to": "2024-03-15T18:30:00.000Z"
     }
   ]
 }
